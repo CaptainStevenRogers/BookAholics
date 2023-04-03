@@ -5,7 +5,6 @@ const crypto = require('crypto')
 const {body, check, oneOf, validationResult } = require('express-validator');
 const router = express.Router()
 
-
 //This router renders index page 
 router.get('/', (_, res) => {
     //First we need to read jsondata
