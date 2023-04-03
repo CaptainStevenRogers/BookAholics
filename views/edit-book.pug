@@ -1,0 +1,47 @@
+html
+  head
+    title Bookaholics uz
+    link(rel='stylesheet' href='https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css')
+    script(src='/js/script.js' type="text/javascript")
+    style.
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      footer {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+      }
+
+      footer p {
+        margin-bottom: .25rem;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+  body
+    form(action='/update/'+book.isbn+'?_method=PUT' method="POST")
+      .form-group.row.mt-5
+        label.col-sm-2.col-form-label.col-form-label-sm(for='colFormLabelSm') Book title
+        .col-sm-10
+          input#colFormLabelSm.form-control.form-control-sm(type='text' name='title' value=`${book.title}`)
+      .form-group.row
+        label.col-sm-2.col-form-label.col-form-label-sm(for='colFormLabelSm') Book author
+        .col-sm-10
+          input#colFormLabelSm.form-control.form-control-sm(type='text' name='author' value=`${book.author}`) 
+      .form-group.row
+        label.col-sm-2.col-form-label.col-form-label-sm(for='colFormLabelSm') Book description
+        .col-sm-10
+          input#colFormLabelSm.form-control.form-control-sm(type='text' name='description' value=`${book.description}`)
+      .col-sm-20
+        input#colFormLabelSm.form-control.form-control-sm(type='submit' value='SUBMIT')
+

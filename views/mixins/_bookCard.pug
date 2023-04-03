@@ -1,0 +1,15 @@
+mixin bookCard(book)
+  .col-md-4
+    .card.mb-4.shadow-sm
+      svg.bd-placeholder-img.card-img-top&attributes({"width": "100%"}, {"height": "225"}, {"focusable": "false"}, {"role": "img"})
+        title #{book.title}
+        rect(width="100%" height="100%" fill="#32a869")
+        text(x="50%" y="50%" fill="#eceeef" dy=".3em") #{book.title} 
+      .card-body
+        .card-text #{book.author}, 
+        .card-text #{book.pages} 
+        .card-text.mb-4 #{book.description}
+        .d-flex.justify-content-between.align-items-center
+          .btn-group
+            button.btn.btn-sm.btn-outline-secondary
+              a(href='/books/'+book.isbn) View
