@@ -9,7 +9,7 @@ or how many books have been returned or renewed or late fine charges, etc.
 #### Intsructions
 1. Download the source code
 ```bash 
-git clone 
+git clone https://github.com/CaptainStevenRogers/BookAholics.git
 ```
 
 2. Install dependencies
@@ -31,5 +31,6 @@ node app
 
 
 ### Github repository link:
+https://github.com/CaptainStevenRogers/BookAholics.git
 
 ### Hosted App link:
