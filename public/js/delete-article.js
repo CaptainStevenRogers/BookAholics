@@ -10,8 +10,6 @@ $(document).ready(function() {
             'link'           : $('textarea[name=link]').val(),
             'author'           : $('input[name=author]').val(),
             'topic'           : $('input[name=topic]').val(),
-
-
              };
 
             $.ajax({
